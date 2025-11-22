@@ -1,0 +1,258 @@
+.lab-body-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5rem 1rem;
+  min-height: 80vh;
+}
+.form-page-container {
+  background: #0f1a11; 
+  border-radius: 24px;
+  cursor: default;
+  box-shadow:
+    0 2px 8px rgba(8, 51, 10, 0.6), 
+    0 10px 30px rgba(41, 199, 69, 0.25); 
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
+  border: 2px solid transparent;
+  position: relative;
+  width: 900px;
+  max-width: 95%;
+  padding: 3rem 3.5rem;
+  text-align: center;
+}
+
+.form-page-container:hover {
+  border-color: #29c745; 
+  box-shadow:
+    0 25px 60px rgba(41, 199, 69, 0.7), 
+    0 35px 70px rgba(8, 51, 10, 0.9); 
+}
+
+.form-page-container h2 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #29c745;
+  letter-spacing: 0.07em;
+  font-size: 2.5rem;
+  user-select: text;
+  animation: shimmerText 4s linear infinite;
+  background: linear-gradient(90deg, #29c745 30%, #2dc247 50%, #29c745 70%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(41, 199, 69, 0.2);
+}
+
+.form-description {
+  margin-bottom: 2.5rem;
+  color: #a0c0a9;
+  font-size: 1.1rem;
+}
+
+/* Form Styling */
+.footprint-form {
+    text-align: left;
+}
+
+.footprint-form label {
+  display: block;
+  color: #a0c0a9;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.footprint-form input, .footprint-form select {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 1.8rem;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  border: 2px solid #335541;
+  background: #0f1a11;
+  color: #e2f0e8;
+  font-weight: 500;
+  outline-offset: 0;
+  transition: all 0.3s ease;
+}
+
+.footprint-form input::placeholder { color: #648b74; }
+
+.footprint-form input:focus, .footprint-form select:focus {
+  border-color: #29c745;
+  box-shadow: 0 0 15px rgba(41, 199, 69, 0.5);
+  outline: none;
+  background: #1a291e;
+}
+
+.form-page-container button {
+  background: #1a291e;
+  color: #29c745;
+  font-weight: 700;
+  padding: 18px 35px;
+  width: 100%;
+  border-radius: 15px;
+  font-size: 1.15rem;
+  box-shadow: 0 10px 25px rgba(41, 199, 69, 0.35);
+  border: none;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  margin-top: 1rem;
+}
+
+.form-page-container button:hover:not(:disabled) {
+  background-color: #0f1a11;
+  color: #2dc247;
+  box-shadow: 0 14px 40px rgba(45, 194, 71, 0.6);
+  transform: translateY(-2px);
+}
+.form-page-container button:disabled {
+    background: #444;
+    color: #888;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+
+.result-card-cf, .result-card-wc, .error-card {
+    background: #1a291e;
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+    border: 1px solid #335541;
+    text-align: center;
+}
+.btn-primary-form {
+    background: #29c745;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f1a11;
+    border-radius: 28px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(41, 199, 69, 0.5);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+}
+.btn-primary-form:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(41, 199, 69, 0.7);
+}
+
+
+.result-card-wc { text-align: left; }
+.result-image img { max-width: 100%; border-radius: 12px; margin-bottom: 1.5rem; }
+.result-text h2, .result-text h3 { color: #29c745; border-bottom: 1px solid #335541; padding-bottom: 0.5rem; }
+.result-text ul { padding-left: 20px; list-style: '♻️';}
+.result-text li { padding-left: 10px; }
+
+
+.result-card-cf h3 { font-size: 1.2rem; color: #a0c0a9; }
+.result-card-cf .footprint-value { font-size: 3.5rem; color: #29c745; text-shadow: 0 0 15px #29c745; margin: 0.5rem 0 1rem; }
+.result-card-cf .result-breakdown { font-size: 0.95rem; text-align: left; }
+.result-card-cf .result-breakdown h4 { color: #a0c0a9; border-top: 1px solid #335541; padding-top: 1rem; margin-top: 1rem; }
+.result-card-cf ul { list-style: none; padding: 0; }
+.result-card-cf li { margin-bottom: 0.5rem; }
+
+
+.error-card { background: rgba(217, 83, 79, 0.1); border-color: rgba(217, 83, 79, 0.5); color: #f2a09d; }
+.loader {
+    width: 40px; height: 40px;
+    border: 4px solid rgba(41, 199, 69, 0.2);
+    border-top-color: #29c745;
+    border-radius: 50%;
+    animation: spin 1.2s cubic-bezier(0.6, 0, 0.4, 1) infinite;
+    margin: 2rem auto;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.lab-container {
+  background: #0f1a11;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(8, 51, 10, 0.7);
+  border: 2px solid #335541;
+  width: 600px;
+  max-width: 95%;
+  padding: 2.5rem;
+  text-align: center;
+}
+.lab-drop-zone {
+  border: 3px dashed #335541;
+  border-radius: 20px;
+  padding: 3rem 1rem;
+  margin-top: 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.lab-drop-zone.drag-over {
+  border-color: #29c745;
+  background-color: #1a291e;
+}
+.lab-file-input {
+  display: none;
+}
+.lab-drop-zone-label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: #a0c0a9;
+  font-size: 1.1rem;
+}
+.lab-drop-zone-label .upload-icon {
+    transition: transform 0.3s ease;
+}
+.lab-drop-zone-label:hover .upload-icon {
+    transform: scale(1.1) translateY(-5px);
+}
+.lab-drop-zone .hidden {
+    display: none;
+}
+#image-preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 17px; 
+}
+.lab-drop-zone.file-selected {
+    border-style: solid;
+    border-color: #29c745;
+}
+
+.lab-analyze-btn {
+  background: #29c745;
+  border: none;
+  padding: 14px 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f1a11;
+  border-radius: 28px;
+  cursor: pointer;
+  width: 100%;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 28px rgba(41, 199, 69, 0.7);
+  margin-top: 2rem;
+}
+.lab-analyze-btn:hover:not(:disabled) {
+  background: #2dc247;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(45, 194, 71, 0.9);
+}
+.lab-analyze-btn:disabled {
+    background: #444;
+    color: #888;
+    cursor: not-allowed;
+    box-shadow: none;
+}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome to GreenShield{% endblock %}
+
+{% block content %}
+<header class="hero">
+    <div class="hero-content">
+        <h1>Saving Our Planet, One Action at a Time</h1>
+        <p>Your personal guide to understanding and reducing your environmental impact through powerful, easy-to-use AI tools.</p>
+        <a href="#projects" class="btn-primary">Explore Our Tools</a>
+    </div>
+</header>
+
+<section class="intro">
+    <h2>📌 Our Mission</h2>
+    <p>
+        Many people want to live more sustainably but don't know where to start. 
+        The choices can be confusing, and individual impact feels unclear.
+        GreenShield solves this by providing clear, simple tools to help you make a real difference.
+    </p>
+</section>
+
+<section class="projects" id="projects">
+    <div class="card" onclick="window.location.href='{{ url_for('carbon_footprint') }}'">
+        <img src="https://images.unsplash.com/photo-1576685148899-7bc3b42137d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="Carbon Footprint Calculator">
+        <div class="card-content">
+            <h3>Carbon Footprint Calculator</h3>
+            <p>Calculate your annual carbon emissions based on your lifestyle.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="window.location.href='{{ url_for('waste_classifier') }}'">
+        <img src="https://images.unsplash.com/photo-1532996122724-e3c354a5b825?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="AI Waste Classifier">
+        <div class="card-content">
+            <h3>AI Waste Classifier</h3>
+            <p>Snap a photo of your trash to learn how to recycle it properly.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
