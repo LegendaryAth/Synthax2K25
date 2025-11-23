@@ -1,1 +1,0 @@
-# Synthax2K25
